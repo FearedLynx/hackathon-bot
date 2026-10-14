@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "hackathon-bot",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  // Hourly. The daily digest + reminders run at the local hour set with /config time.
+  "triggers": { "crons": ["0 * * * *"] },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hackathon-bot",
+      "database_id": "f1eaf6e1-232f-4e5b-af49-aeac20c420c2"
+    }
+  ],
+  "vars": {
+    // Used to build "Add to calendar" links.
+    "PUBLIC_URL": "https://hackathon-bot.franciszek-kossut.workers.dev"
+  }
+  // Secrets, uploaded from .dev.vars with `npm run secrets`:
+  // DISCORD_APP_ID, DISCORD_PUBLIC_KEY, DISCORD_TOKEN, CHANNEL_ID
+}

@@ -1,0 +1,7 @@
+# Copy to .dev.vars (never commit it). Used by `npm run dev` and `npm run register`.
+DISCORD_APP_ID=
+DISCORD_PUBLIC_KEY=
+DISCORD_TOKEN=
+CHANNEL_ID=
+# Optional: register commands to one server instantly instead of globally
+GUILD_ID=

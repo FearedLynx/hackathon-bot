@@ -1,0 +1,23 @@
+{
+  "name": "hackathon-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --test-scheduled",
+    "deploy": "wrangler deploy",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "dry-run": "node scripts/dry-run.ts",
+    "register": "node --env-file=.dev.vars scripts/register-commands.ts",
+    "secrets": "wrangler secret bulk .dev.vars",
+    "db:init":"wrangler d1 execute hackathon-bot --remote --file=schema.sql",
+    "db:init:local": "wrangler d1 execute hackathon-bot --local --file=schema.sql"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261013.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.4",
+    "wrangler": "^4.150.0"
+  }
+}
