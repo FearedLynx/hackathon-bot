@@ -126,3 +126,7 @@ Adding a source: write `src/sources/<name>.ts` that returns `RawEvent[]` and reg
 `src/sources/index.ts`. Sources earlier in that list win when the same event appears twice.
 Tunables: `MAX_SHORT_DAYS` (classify.ts), `MAX_POSTS_PER_RUN` (ingest.ts), `REMIND_AT_DAYS` (reminders.ts),
 cron schedule (wrangler.jsonc); everything else is in `/config`.
+
+## License
+
+Copyright © 2026 Franciszek Kossut. **All rights reserved.** This code is public for viewing only; no license is granted to copy, modify, distribute or use it. See [LICENSE](LICENSE).
